@@ -7,10 +7,11 @@ Each one will serve a function: Vite for packaging the application, Hybrids is a
 
 ### Running this example
 
-To run this boilerplate you need `node` installed. If you prefer to use `bun`, it will be much faster, so it is recommended!
+To run this boilerplate you need `bun` or `node` installed. If you prefer to use `bun`, it will be much faster, so it is recommended!
 
-To install dependencies `npm install` or `bun install`.
-To run the provided example, you can use `npm start` or `bun start` command.
+To install dependencies `bun install` or `npm install`.
+To run the provided example, you can use `bun electron-dev` or `npm electron-dev` command.
+Don't forget that this project is html in nature, so you can run it in the web environment as well, so you can use the `bun dev` command to use the local server and see the application in your browser.
 
 ```bash
 bun electron-dev
@@ -28,7 +29,7 @@ To create a executable and distribute the application, run:
 bun electron-build
 ```
 
-In linux this command will generate .deb and AppImage in electron/dist directory.
+In linux this command will generate .deb and AppImage in electron/dist directory. In Windows will generate .exe application.
 
 ### Optional to create a mobile application
 
