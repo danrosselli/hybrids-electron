@@ -1,0 +1,57 @@
+{
+  "name": "hybrids-webapp",
+  "version": "1.0.0",
+  "description": "An Amazing Web App with Hybrids Framework",
+  "main": "electron/index.js",
+  "keywords": [
+    "capacitor",
+    "mobile"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron-dev": "bun concurrently \"bun dev\" \"bun run electron-start\"",
+    "electron-start": "cross-env NODE_ENV=development electron electron/index.js",
+    "electron-build": "cross-env NODE_ENV=production bun run build && electron-builder"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/camera": "latest",
+    "@capacitor/core": "latest",
+    "@capacitor/splash-screen": "latest"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "latest",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^32.2.1",
+    "electron-builder": "^24.13.3",
+    "vite": "^5.4.9"
+  },
+  "author": {
+    "name": "Seu Nome",
+    "email": "seuemail@example.com"
+  },
+  "homepage": "http://www.example.com",
+  "license": "ISC",
+  "build": {
+    "appId": "com.example.hybrids",
+    "productName": "Hybrids WebApp",
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "output": "electron/dist"
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ],
+      "category": "Utility"
+    }
+  }
+}
