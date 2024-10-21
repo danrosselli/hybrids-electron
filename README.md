@@ -20,6 +20,16 @@ bun electron-dev
 npm electron-dev
 ```
 
+### Packaging and distribute native application
+
+To create a executable and distribute the application, run:
+
+```bash
+bun electron-build
+```
+
+In linux this command will generate .deb and AppImage in electron/dist directory.
+
 ### Optional to create a mobile application
 
 You can create a mobile application from this boilerplate, because the Capacitor lib is installed too. You first need to generate a build with `vite`, and then create the android project:
